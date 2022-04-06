@@ -14,16 +14,29 @@ var szamolas = [];
 function szamBeiras() {
     if(szamolas.length != 2) {
         $(".kijelzo").innerHTML += event.target.innerHTML;
-        // a = a + parseFloat(event.target.innerHTML);
-        szamolas.push(parseFloat(event.target.innerHTML));
+        a = a + parseFloat(event.target.innerHTML);
+        szamolas.push(a);
+        // szamolas.push(parseFloat(event.target.innerHTML));
     }
 }
 
 function muveletBeiras() {
-    if(event.target.innerHTML == "C") $(".kijelzo").innerHTML = "";
-    else if(event.target.innerHTML == "=") $(".kijelzo").innerHTML = a;
+    if(event.target.innerHTML == "C") {
+        $(".kijelzo").innerHTML = "";
+        a = 0;
+        szamolas = [];
+    }
+    else if(event.target.innerHTML == "=") {
+        $(".kijelzo").innerHTML = a;
+        a = 0;
+        szamolas = [];
+    }
     else {
-        $(".kijelzo").innerHTML += event.target.innerHTML;
+        if(event.target.innerHTML == "*") {
+            $(".kijelzo").innerHTML += event.target.innerHTML;
+        }
+        /* $(".kijelzo").innerHTML += event.target.innerHTML;
+        szamolas = a.split(event.target.innerHTML); */
     }
 }
 
