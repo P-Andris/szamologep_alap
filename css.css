@@ -1,6 +1,7 @@
 main {
     max-width: 200px;
     text-align: center;
+    margin: auto;
 }
 * {
     box-sizing: border-box;
@@ -23,10 +24,16 @@ article {
     padding: 5px;
 }
 .szamok {
-   
+    width: 100px;
+    
 }
 .szamok button {
-    
+    width: 30px;
+    height: 30px;
+    margin: 1px;
+}
+.szamok #szam0 {
+    width: 93px;
 }
 .muvjelek {
     grid-area: muv;
@@ -36,6 +43,5 @@ article {
     grid-gap: 10px;
 }
 .muvjelek button {
-  
     width: 30px;
 }
